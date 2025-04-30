@@ -2,7 +2,7 @@ import WaitlistForm from "@/components/waitlist-form"
 import { Smartphone, Zap, Shield } from "lucide-react"
 import Image from "next/image"
 import waitlist from "@/components/assets/waitlist.jpg"
-import Logo from "@/components/assets/smatpay-logo.png"
+import Logo from "@/components/assets/mockup.png"
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
-          <Image src={Logo} alt="" className="w-30 mx-auto bg-black rounded-md" />
+          <Image src={Logo} alt="" className="w-70 mx-auto bg-black rounded-md" />
 
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Join our waitlist</h2>
             <p className="text-gray-600 mb-8">
