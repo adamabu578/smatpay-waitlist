@@ -113,7 +113,7 @@ export default function WaitlistForm() {
 
       <Button
         type="submit"
-        className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+        className="w-full bg-black hover:bg-purple-600 text-white"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Joining..." : "Join Waitlist"}

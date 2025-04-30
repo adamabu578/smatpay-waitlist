@@ -8,8 +8,8 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <div className="container mx-auto px-4 py-12 md:py-24">
         <header className="mb-12 text-center">
-          <Image src={Logo} alt="" className="w-32 mx-auto" />
-          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
+          <Image src={Logo} alt="" className="w-32 mx-auto bg-black rounded-md" />
+          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-purple-950 mb-4">
             Smatpay VTU App
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
