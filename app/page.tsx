@@ -1,6 +1,7 @@
 import WaitlistForm from "@/components/waitlist-form"
 import { Smartphone, Zap, Shield } from "lucide-react"
 import Image from "next/image"
+import waitlist from "@/components/assets/waitlist.jpg"
 import Logo from "@/components/assets/smatpay-logo.png"
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <div className="container mx-auto px-4 py-12 md:py-24">
         <header className="mb-12 text-center">
-          <Image src={Logo} alt="" className="w-32 mx-auto bg-black rounded-md" />
+          <Image src={waitlist} alt="" className="w-50 mx-auto bg-black rounded-md" />
           <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-purple-950 mb-4">
             Smatpay VTU App
           </h1>
@@ -19,6 +20,8 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
+          <Image src={Logo} alt="" className="w-30 mx-auto bg-black rounded-md" />
+
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Join our waitlist</h2>
             <p className="text-gray-600 mb-8">
               Be the first to know when we launch. Get early access and exclusive offers.
