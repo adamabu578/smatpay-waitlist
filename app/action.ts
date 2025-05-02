@@ -1,57 +1,31 @@
 "use server"
 
-import fs from "fs"
-import path from "path"
+export async function joinWaitlist(email: string) {
+  // Simulate a delay to show loading state
+  await new Promise((resolve) => setTimeout(resolve, 1500))
 
-type WaitlistEntry = {
-  name: string
-  email: string
-  phone: string
-  network: string
-  timestamp: string
-}
+  // In a real application, you would:
+  // 1. Validate the email
+  // 2. Store it in a database (e.g., using Prisma with a database like PostgreSQL)
+  // 3. Send a confirmation email
+  // 4. Handle errors appropriately
 
-export async function joinWaitlist(data: Omit<WaitlistEntry, "timestamp">) {
-  // Validate the data
-  if (!data.name || !data.email || !data.phone) {
-    throw new Error("Missing required fields")
-  }
+  // For now, we'll just return a success response
+  return { success: true, email }
 
-  // In a real app, you would store this in a database
-  // For this example, we'll store it in a JSON file
-  const entry: WaitlistEntry = {
-    ...data,
-    timestamp: new Date().toISOString(),
-  }
-
+  // Example of how you might implement this with a database:
+  /*
   try {
-    // Create data directory if it doesn't exist
-    const dataDir = path.join(process.cwd(), "data")
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true })
-    }
-
-    const filePath = path.join(dataDir, "waitlist.json")
-
-    // Read existing data or create empty array
-    let waitlist: WaitlistEntry[] = []
-    if (fs.existsSync(filePath)) {
-      const fileContent = fs.readFileSync(filePath, "utf8")
-      waitlist = JSON.parse(fileContent)
-    }
-
-    // Add new entry
-    waitlist.push(entry)
-
-    // Write back to file
-    fs.writeFileSync(filePath, JSON.stringify(waitlist, null, 2))
-
-    // Simulate network delay
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    return { success: true }
+    const result = await db.waitlist.create({
+      data: {
+        email,
+        joinedAt: new Date(),
+      },
+    })
+    return { success: true, email }
   } catch (error) {
-    console.error("Error saving waitlist entry:", error)
-    throw new Error("Failed to join waitlist")
+    console.error('Failed to add to waitlist:', error)
+    throw new Error('Failed to join waitlist')
   }
+  */
 }
