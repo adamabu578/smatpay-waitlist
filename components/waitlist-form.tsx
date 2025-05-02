@@ -98,7 +98,7 @@ export default function WaitlistForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="space-y-2">
         <Label htmlFor="name">Full Name</Label>
-        <Input id="name" name="name" placeholder="John Doe" required value={formData.name} onChange={handleChange} />
+        <Input id="name" name="name" placeholder="" required value={formData.name} onChange={handleChange} />
       </div>
 
       <div className="space-y-2">
@@ -107,7 +107,7 @@ export default function WaitlistForm() {
           id="email"
           name="email"
           type="email"
-          placeholder="john@example.com"
+          placeholder=""
           required
           value={formData.email}
           onChange={handleChange}
@@ -119,7 +119,7 @@ export default function WaitlistForm() {
         <Input
           id="phone"
           name="phone"
-          placeholder="08012345678"
+          placeholder=""
           required
           value={formData.phone}
           onChange={handleChange}
