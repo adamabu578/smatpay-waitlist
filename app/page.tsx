@@ -201,7 +201,7 @@ export default function WaitlistPage() {
           className="mt-16 text-center"
         >
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            Join <span className="font-medium text-purple-600 dark:text-purple-400">2,500+</span> others already on
+            Join <span className="font-medium text-purple-600 dark:text-purple-400">30+</span> others already on
             the waitlist
           </p>
 
